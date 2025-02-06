@@ -99,3 +99,13 @@ models:
         description: '{{ doc("item_tax_amount") }}'
       - name: net_item_sales_amount
         description: '{{ doc("net_item_sales_amount") }}'
+  - name: dim_stripe__payment_details
+    columns: 
+      - name: id
+        description: unique id for stripe payments
+        tests:
+          - unique
+          - not_null
+      - name: amount
+        description: amount paid through stripe
+           
