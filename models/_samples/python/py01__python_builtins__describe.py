@@ -2,7 +2,7 @@
 def model(dbt, session):
 
     # bring in reference model as dataframe
-    customers_df = dbt.ref("dim_customers")
+    customers_df = dbt.ref("dim_stripe__payment_details")
 
     # do transformation - apply "describe" function
     described_df = customers_df.describe()
